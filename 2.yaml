@@ -10,4 +10,4 @@
       register: dir_contents
     - name: Print directory contents using loops
       debug:
-        msg: "{{ item }}"
+        msg: "{{ dir_contents }}"
