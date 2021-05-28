@@ -6,4 +6,6 @@
   tasks:
     - name: just display
       shell: uptime
-      register: hostname
+      register: res1
+    - debug:
+        var: res1
