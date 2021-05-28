@@ -4,8 +4,8 @@
     ansible_python_interpreter: /usr/bin/python3
    
   tasks:
-    - name: List all files and directories in ~
-      shell: ls ~
+    - name: List all files and directories in /bin
+      shell: ls /bin
       register: dir_contents
     - name: Print directory contents using loops
       debug:
