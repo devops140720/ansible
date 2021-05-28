@@ -1,5 +1,6 @@
 ---
 - name: Update web servers
+  hosts: webservers
 
   tasks:
   - name: Ensure apache is at the latest version
