@@ -4,7 +4,7 @@
     ansible_python_interpreter: /usr/bin/python3
 
 tasks:
-    - name: "install nano"
-      apt:
-        name: nano
-        state: latest
+  - name: "install nano"
+    apt:
+      name: nano
+      state: latest
