@@ -1,0 +1,13 @@
+---
+- hosts: 127.0.0.1
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+   
+  tasks:
+    - name: List all files and directories in /home/ansible
+      shell: ls /home/ansible
+      register: dir_contents
+    - name: Print directory contents using loops
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ dir_contents.stdout_lines }}"
