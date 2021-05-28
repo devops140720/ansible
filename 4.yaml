@@ -3,8 +3,11 @@
   vars:
     ansible_python_interpreter: /usr/bin/python3
 
-tasks:
+  tasks:
   - name: "install nano"
     apt:
       name: nano
       state: latest
+      
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
