@@ -2,19 +2,9 @@
 - hosts: mygroup
   vars:
     ansible_python_interpreter: /usr/bin/python3
-    package_names:
-      - nano
-      - telnet
-  tasks:
-    - name: "Check if vim package is installed or not on Debian Linux family"
-      package:
-        name: "{{ item }}"
-        state: present
-      check_mode: true
-      loop: "{{ package_names }}"
-      register: package_check
 
-    - name: "Print execution results"
-      debug:
-        msg: "Package is installed"
-      when: package_check is succeeded      
+tasks:
+    - name: "install nano"
+      apt:
+        name: nano
+        state: latest
