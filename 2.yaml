@@ -11,4 +11,3 @@
     - name: Print directory contents using loops
       debug:
         msg: "{{ item }}"
-      loop: "{{ dir_contents.stdout_lines }}"
